@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: myfig
+# key: myfig
+# --
+\myfig{${1:path to filename}}
+      {}
+      {width=${2:width}\textwidth}
+      {${3:short caption}}
+      {$3: ${4:long caption}}
+      {fig:${5:${$3}}}
+$0
