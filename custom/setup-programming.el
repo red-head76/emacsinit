@@ -83,25 +83,26 @@
                                      indent-tabs-mode t))
 )
 
+;; cmake-ide
+(require 'cmake-ide)
+(cmake-ide-setup)
+(setq cmake-ide-flags-c++ (append '("std=c++11")))
+
+;; setup is done by cmake, this is just the old manual version
 ;; flycheck and google's cpplint checkstyle
-(require 'flycheck)
-(eval-after-load 'flycheck
-  '(progn
-     (require 'flycheck-google-cpplint)
-     ;; if this isnt available, download it with the terminal command and place it in the elpa/flycheck folder
-     ;; wget https://raw.githubusercontent.com/flycheck/flycheck-google-cpplint/master/flycheck-google-cpplint.el
-     (flycheck-add-next-checker 'c/c++-clang
-				'(warning . c/c++-googlelint))))
+;; (require 'flycheck)
+;; (eval-after-load 'flycheck
+;;   '(progn
+;;      (require 'flycheck-google-cpplint)
+;;      ;; if this isnt available, download it with the terminal command and place it in the elpa/flycheck folder
+;;      ;; wget https://raw.githubusercontent.com/flycheck/flycheck-google-cpplint/master/flycheck-google-cpplint.el
+;;      (flycheck-add-next-checker 'c/c++-clang
+;; 				'(warning . c/c++-googlelint))))
 
-(add-hook 'c++-mode-hook
-	  (lambda () (setq flycheck-clang-language-standard "c++11")))
-(add-hook 'c++-mode-hook 'flycheck-mode)
-(add-hook 'c-mode-hook 'flycheck-mode)
-
-;; ;; cmake-ide
-;; (require 'cmake-ide)
-;; (cmake-ide-setup)
-;; (setq cmake-ide-flags-c++ (append '("std=c++11")))
+;; (add-hook 'c++-mode-hook
+;; 	  (lambda () (setq flycheck-clang-language-standard "c++11")))
+;; (add-hook 'c++-mode-hook 'flycheck-mode)
+;; (add-hook 'c-mode-hook 'flycheck-mode)
 
 
 ;; ;; irony for completion

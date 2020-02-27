@@ -88,7 +88,7 @@
      ("melpa" . "http://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (yasnippet-snippets company py-autopep8 undo-tree yasnippet elpy magit org ivy workgroups2 volatile-highlights material-theme ibuffer-vc gnu-elpa-keyring-update expand-region ergoemacs-mode))))
+    (auto-complete-clang company-irony irony flycheck cmake-ide yasnippet-snippets company py-autopep8 undo-tree yasnippet elpy magit org ivy workgroups2 volatile-highlights material-theme ibuffer-vc gnu-elpa-keyring-update expand-region ergoemacs-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
